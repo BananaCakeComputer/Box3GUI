@@ -1,4 +1,4 @@
-var guiSpace = {1:false ,2:false ,3:false ,4:false ,5:false}//玩家私有GUI房间字典
+var guiSpace = {1:false ,2:false ,3:false ,4:false ,5:false}
 var guiBackground = 0
 var guiPublicItems = {}
 var guiPublicItemsNames = []
@@ -120,7 +120,6 @@ world.onPlayerJoin(({entity})=>{
             entity.guiOnPressHasBeenFinish = false
             for(var i = entity.guiBtnI;i <= guiPublicItemsNames.length;i++){
                 entity.guiBtnI += 1
-                //console.log(guiPublicItems[guiPublicItemsNames[i]])
                 if(guiPublicItems[guiPublicItemsNames[i]][2]==='btn'){
                     entity.guiOnPressHasBeenFinish = true
                     entity.guiBtnI -= 1
@@ -132,7 +131,6 @@ world.onPlayerJoin(({entity})=>{
             }
         }else{
             for(var i = 0;i <= (guiPublicItemsNames.length-1);i++){
-                //console.log(guiPublicItems[guiPublicItemsNames[i]])
                 guiPublicItems[guiPublicItemsNames[i]][1].meshColor = new Box3RGBAColor(1, 1, 1, 1)
             }
             if(!entity.buttonPress){
