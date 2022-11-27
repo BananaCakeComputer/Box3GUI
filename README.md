@@ -1,2 +1,3 @@
-# Box3GUI
-代码岛3.0 二维图形界面扩展
+# Box3 GUI
+
+### 查找使用教程，了解本项目请查看[wiki](https://github.com/BananaCakeComputer/Box3GUI/wiki)
