@@ -166,4 +166,3 @@ world.onRelease(({button, entity}) => {
     }
 })
 //V0.0.2于2022/12/11发布更新
-})
