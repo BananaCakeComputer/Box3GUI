@@ -79,7 +79,7 @@ class Box3GUI {
         delete guiPublicItems[name]
         for(var i = 0;i < guiPublicItemsNames.length;i++){
             if(guiPublicItemsNames[i] == name){
-                delete guiPublicItemsNames[i]
+                guiPublicItemsNames.splice(i,1)
                 return
             }
         }
