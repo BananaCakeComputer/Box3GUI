@@ -92,13 +92,17 @@ class Box3GUI {
         }
         return false
     }
-    publicItemScale(item,x,y,z){
-        guiPublicItems[item][1].meshScale = new Box3Vector3(x*0.065, y*0.065, z*0.065);
+    publicItemScale(item,x,y){
+        guiPublicItems[item][1].meshScale = new Box3Vector3(0.065, y*0.065, x*0.065);
     }
     publicTint(color){
-        for(var z = 3;z <= 9;z++){
+        for(var z = 2;z <= 9;z++){
             voxels.setVoxel(2,1,z,color+'_light');
-            voxels.setVoxel(2,6,z,color+'_light');
+            voxels.setVoxel(2,6,z+1,color+'_light');
+        }
+        for(var z = 2;z <= 10;z++){
+            voxels.setVoxel(3,1,z,color+'_light');
+            voxels.setVoxel(3,6,z,color+'_light');
         }
         for(var y = 2;y <= 5;y++){
             voxels.setVoxel(2,y,1,color+'_light');
