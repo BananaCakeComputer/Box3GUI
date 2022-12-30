@@ -18,7 +18,7 @@ for(var y = 2;y<=5;y++){
 for(var z = 2;z<=10;z++){
     for(var y = 2;y<=5;y++){
         voxels.setVoxel(7,y,z,'white');
-        voxels.setVoxel(1,y,z,'black');
+        voxels.setVoxel(1,y,z,'white');
     };
 };
 for(var z = 2;z<=10;z++){
