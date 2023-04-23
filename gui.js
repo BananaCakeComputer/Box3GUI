@@ -189,10 +189,10 @@ world.onRelease(({button, entity}) => {
     }
 })
 world.onPlayerLeave(({entity}) => {
-    for(let i in guiSpace){//遍历字典
-        if(guiSpace[i]==entity.player.name){//如果这一项被玩家占用
-            guiSpace[i] = false//这一项设为false
-            break//推出循环
+    for(let i in guiSpace){
+        if(guiSpace[i]==entity.player.name){
+            guiSpace[i] = false
+            break
         }
     }
 })
