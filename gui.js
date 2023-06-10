@@ -196,3 +196,4 @@ world.onPlayerLeave(({entity}) => {
         }
     }
 })
+//V0.0.6于2023/06/11发布更新
