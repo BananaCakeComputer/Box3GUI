@@ -121,28 +121,11 @@ world.onPlayerJoin(({entity})=>{
         if(entity.guiSpace!='public'){
             return
         }
-        if(entity.guiBtnI==0){
-            entity.guiOnPressHasBeenFinish = false
-            publicHasBtn = false
-            for(var i = 0;i <= (guiPublicItemsNames.length-1);i++){
-                if(guiPublicItems[guiPublicItemsNames[i]][2]='btn'){
-                    publicHasBtn = true
-                }
-            }
-            if(!publicHasBtn){
-                return
-            }
-            for(var i = entity.guiBtnI;i <= guiPublicItemsNames.length;i++){
-                entity.guiBtnI += 1
-                if(guiPublicItems[guiPublicItemsNames[i]][2]==='btn'){
-                    entity.guiOnPressHasBeenFinish = true
-                    entity.guiBtnI -= 1
-                    break
-                }
-            }
-            if(!entity.guiOnPressHasBeenFinish){
-                entity.guiBtnI = 0
-            }
+        if(guiPublicItemsNames.length==0){
+            return
+        }
+        if(entity.guiBtnI==0 && guiPublicItems[guiPublicItemsNames[0]][2]==='img'){
+            return
         }else{
             for(var i = 0;i <= (guiPublicItemsNames.length-1);i++){
                 guiPublicItems[guiPublicItemsNames[i]][1].meshColor = new Box3RGBAColor(1, 1, 1, 1)
